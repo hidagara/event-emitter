@@ -3,7 +3,7 @@ import Vapor
 /// Register your application's routes here.
 public func routes(_ router: Router) throws {
     // Basic "It works" example
-    router.get { req in
+  router.get { req -> String in
         return "It works!"
     }
     
@@ -11,6 +11,7 @@ public func routes(_ router: Router) throws {
     router.get("hello") { req in
         return "Hello, world!"
     }
+  
 
     // Example of configuring a controller
     let todoController = TodoController()
